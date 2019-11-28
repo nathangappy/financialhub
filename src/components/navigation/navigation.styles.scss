@@ -1,0 +1,14 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  background: lightgray;
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    margin: 1rem;
+  }
+}
