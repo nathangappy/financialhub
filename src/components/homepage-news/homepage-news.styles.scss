@@ -1,0 +1,26 @@
+.homenews {
+  margin: 2rem 0;
+  width: 65%;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+
+    li {
+      display: flex;
+    }
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  img {
+    width: 50%;
+  }
+}
+
+.story-info {
+  margin-left: 5px;
+}
