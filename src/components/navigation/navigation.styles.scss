@@ -11,5 +11,9 @@
 
   li {
     margin: 1rem;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
