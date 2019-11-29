@@ -2,15 +2,25 @@ import React from 'react';
 
 import './company-news.styles.scss';
 
-const CompanyNews = () => (
-  <div className='company-news'>
-    <h3>Company News</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatem
-      veniam ipsum perferendis adipisci corporis doloribus inventore
-      reprehenderit cupiditate alias ratione officiis rem, iusto dolores?
-    </p>
-  </div>
-);
+const CompanyNews = ({ stockNews }) => {
+  let newsList = stockNews.map(item => {
+    return (
+      <li key={item.date}>
+        <a href={`${item.news_url}`}>
+          <img src={`${item.image_url}`} alt='' />
+          <p>{item.title}</p>
+        </a>
+      </li>
+    );
+  });
+
+  return (
+    <div className='company-news'>
+      <div className='company-news-group'>
+        <ul>{newsList}</ul>
+      </div>
+    </div>
+  );
+};
 
 export default CompanyNews;

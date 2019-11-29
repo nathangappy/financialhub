@@ -1,3 +1,22 @@
 .company-news {
-  width: 50%;
+  width: 70%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.company-news-group {
+  width: 100%;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li {
+    width: 30%;
+    margin-bottom: 1rem;
+  }
 }

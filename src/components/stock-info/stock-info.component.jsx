@@ -9,7 +9,7 @@ const StockInfo = props => {
   return (
     <main className='stockinfo'>
       <CompanyInfo globalQuote={props.globalQuote} />
-      <CompanyNews />
+      <CompanyNews stockNews={props.stockNews} />
     </main>
   );
 };
