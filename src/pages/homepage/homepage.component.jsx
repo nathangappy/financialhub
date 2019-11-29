@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import firebase from '../../firebase';
+
 import axios from 'axios';
 
 import Navigation from '../../components/navigation/navigation.component';
@@ -19,6 +21,12 @@ class HomePage extends Component {
     );
     this.setState({ headlineStories: headlines.data.articles });
   }
+  handleSignout = () => {
+    firebase
+      .auth()
+      .signOut()
+      .catch(err => console.log(err));
+  };
   render() {
     return (
       <div className='homepage'>

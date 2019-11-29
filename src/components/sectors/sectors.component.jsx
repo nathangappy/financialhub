@@ -16,7 +16,6 @@ class Sectors extends Component {
     let sectorData = await axios.get(
       'https://www.alphavantage.co/query?function=SECTOR&apikey=V18JBVR8U7KTDD7W'
     );
-    console.log(sectorData);
     const sectorArray = Object.entries(
       sectorData.data['Rank F: Year-to-Date (YTD) Performance']
     );

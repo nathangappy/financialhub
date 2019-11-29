@@ -9,6 +9,7 @@ import Dashboard from './pages/dashboard/dashboard.component';
 import Portfolio from './pages/portfolio/portfolio.component';
 import Community from './pages/community/community.component';
 import SignUp from './pages/signup/signup.component';
+import SignIn from './pages/signin/signin.component';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/portfolio' component={Portfolio} />
         <Route exact path='/community' component={Community} />
         <Route exact path='/signup' component={SignUp} />
+        <Route exact path='/signin' component={SignIn} />
       </Switch>
     </div>
   );
