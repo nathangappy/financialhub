@@ -6,7 +6,7 @@ const CompanyNews = ({ stockNews }) => {
   let newsList = stockNews.map(item => {
     return (
       <li key={item.date}>
-        <a href={`${item.news_url}`} target='_blank'>
+        <a href={`${item.news_url}`} target='_blank' rel='noopener noreferrer'>
           <img src={`${item.image_url}`} alt='' />
           <p>{item.title}</p>
         </a>
