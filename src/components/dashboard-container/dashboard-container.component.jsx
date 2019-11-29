@@ -8,7 +8,7 @@ import DashboardSide from '../dashboard-side/dashboard-side.component';
 const DashboardContainer = props => {
   return (
     <div className='dashboard-container'>
-      <StockInfo globalQuote={props.globalQuote} stockNews={props.stockNews} />
+      <StockInfo globalQuote={props.globalQuote} stockNews={props.stockNews} chartData={props.chartData} />
       <DashboardSide
         tickerSearch={props.tickerSearch}
         companySearch={props.companySearch}

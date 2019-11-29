@@ -1,10 +1,21 @@
 .searchbar {
   text-align: left;
+
+  form {
+    margin-bottom: 1rem;
+  }
+
+  li {
+    padding: 5px;
+    border-bottom: 1px solid black;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
 }
 
-.tickerSearch {
-  label {
-    display: block;
-    text-align: left;
-  }
+label {
+  display: block;
+  text-align: left;
 }

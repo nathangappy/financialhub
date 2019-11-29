@@ -13,10 +13,11 @@ class Dashboard extends Component {
     super();
 
     this.state = {
-      globalQuote: {},
-      stockNews: [],
       tickerSearch: '',
       companySearch: '',
+      globalQuote: {},
+      chartData: {},
+      stockNews: [],
       companyMatches: []
     };
   }
@@ -28,16 +29,25 @@ class Dashboard extends Component {
   handleTickerSearch = async e => {
     e.preventDefault();
     try {
+      // get news stories about searched ticker
       let newsArray = [];
-      // let news = await axios.get(
-      //   `https://stocknewsapi.com/api/v1?tickers=${this.state.tickerSearch.toUpperCase()}&items=6&token=j5kxgoilv3tyac5is1rcowzhm1bgacherychyco2`
-      // );
-      // news.data.data.forEach(item => newsArray.push(item));
+      let news = await axios.get(
+        `https://stocknewsapi.com/api/v1?tickers=${this.state.tickerSearch.toUpperCase()}&items=9&token=j5kxgoilv3tyac5is1rcowzhm1bgacherychyco2`
+      );
+      news.data.data.forEach(item => newsArray.push(item));
       this.setState({ stockNews: newsArray });
+
+      // get quote data about searched ticker
       let quote = await axios.get(
         `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.tickerSearch.toUpperCase()}&apikey=V18JBVR8U7KTDD7W`
       );
       this.setState({ globalQuote: quote.data['Global Quote'] });
+
+      // get up to date chart data for searched ticker
+      let chartData = await axios.get(
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${this.state.tickerSearch.toUpperCase()}&apikey=V18JBVR8U7KTDD7W`
+      );
+      this.setState({ chartData: chartData.data['Time Series (Daily)'] });
       this.setState({ tickerSearch: '' });
     } catch (error) {
       console.log(error);
@@ -65,10 +75,11 @@ class Dashboard extends Component {
       <div className='dashboard'>
         <Navigation />
         <DashboardContainer
-          globalQuote={this.state.globalQuote}
-          stockNews={this.state.stockNews}
           tickerSearch={this.state.tickerSearch}
           companySearch={this.state.companySearch}
+          globalQuote={this.state.globalQuote}
+          chartData={this.state.chartData}
+          stockNews={this.state.stockNews}
           companyMatches={this.state.companyMatches}
           handleSearchChange={this.handleSearchChange}
           handleTickerSearch={this.handleTickerSearch}

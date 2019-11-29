@@ -1,6 +1,8 @@
 .stockinfo {
+  height: auto;
   width: 65%;
   display: flex;
+  justify-content: space-between;
   border: 2px solid black;
   padding: 1rem;
 }

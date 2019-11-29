@@ -1,5 +1,5 @@
 .company-news {
-  width: 70%;
+  width: 60%;
 
   img {
     width: 100%;
@@ -8,6 +8,26 @@
 
 .company-news-group {
   width: 100%;
+
+  img {
+    &:hover {
+      transition: 0.6s;
+      transform: scale(1.1);
+    }
+  }
+
+  a {
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  p {
+    color: #333;
+
+    &:hover {
+      color: #777;
+    }
+  }
 
   ul {
     display: flex;
@@ -18,5 +38,6 @@
   li {
     width: 30%;
     margin-bottom: 1rem;
+    overflow: hidden;
   }
 }

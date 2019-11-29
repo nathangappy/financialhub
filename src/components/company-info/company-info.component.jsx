@@ -2,7 +2,7 @@ import React from 'react';
 
 import './company-info.styles.scss';
 
-const CompanyInfo = ({ globalQuote }) => {
+const CompanyInfo = ({ globalQuote, chartData }) => {
   return (
     <div className='company-info'>
       <h3>{globalQuote['01. symbol']}</h3>
