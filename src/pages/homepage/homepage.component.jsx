@@ -25,12 +25,13 @@ class HomePage extends Component {
     firebase
       .auth()
       .signOut()
+      .then(() => console.log('signed out'))
       .catch(err => console.log(err));
   };
   render() {
     return (
       <div className='homepage'>
-        <Navigation />
+        {/* <Navigation user={this.props.user} handleSignout={this.handleSignout} /> */}
         <HomepageContainer newsList={this.state.headlineStories} />
       </div>
     );

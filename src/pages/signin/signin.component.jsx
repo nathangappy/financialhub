@@ -12,18 +12,8 @@ class SignIn extends Component {
 
     this.state = {
       email: '',
-      password: '',
-      user: {}
+      password: ''
     };
-  }
-  componentDidMount() {
-    firebase.auth().onAuthStateChanged(user => {
-      console.log(user);
-      if (user) {
-        console.log('logged in');
-        this.setState({ user: user });
-      }
-    });
   }
   handleSignInChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -34,7 +24,7 @@ class SignIn extends Component {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => this.setState({ email: '', password: '' }))
+      .then(() => console.log(this.props.history.push('/')))
       .catch(err => console.log(err));
   };
   handleSignout = () => {
@@ -47,7 +37,7 @@ class SignIn extends Component {
   render() {
     return (
       <div>
-        <Navigation user={this.state.user} handleSignout={this.handleSignout} />
+        <Navigation handleSignout={this.handleSignout} />
         <h1>Sign In To Your Account</h1>
         <form action='' onSubmit={this.handleSignInSubmit}>
           <label htmlFor='email' />
