@@ -24,36 +24,20 @@ class SignIn extends Component {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => console.log(this.props.history.push('/')))
-      .catch(err => console.log(err));
-  };
-  handleSignout = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => console.log('signed the fuck out'))
+      .then(() => this.props.history.push('/'))
+      .then(() => console.log('signed in'))
       .catch(err => console.log(err));
   };
   render() {
     return (
       <div>
-        <Navigation handleSignout={this.handleSignout} />
+        <Navigation />
         <h1>Sign In To Your Account</h1>
         <form action='' onSubmit={this.handleSignInSubmit}>
           <label htmlFor='email' />
-          <input
-            type='email'
-            name='email'
-            value={this.state.email}
-            onChange={this.handleSignInChange}
-          />
+          <input type='email' name='email' value={this.state.email} onChange={this.handleSignInChange} />
           <label htmlFor='password' />
-          <input
-            type='password'
-            name='password'
-            value={this.state.password}
-            onChange={this.handleSignInChange}
-          />
+          <input type='password' name='password' value={this.state.password} onChange={this.handleSignInChange} />
           <button>Sign In</button>
         </form>
       </div>

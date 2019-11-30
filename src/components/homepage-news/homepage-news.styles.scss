@@ -4,11 +4,10 @@
 
   ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
 
     li {
-      display: flex;
     }
 
     @media (max-width: 1200px) {
@@ -17,7 +16,7 @@
   }
 
   img {
-    width: 50%;
+    width: 100%;
   }
 }
 

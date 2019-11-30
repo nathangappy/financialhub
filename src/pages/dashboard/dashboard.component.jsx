@@ -23,9 +23,7 @@ class Dashboard extends Component {
   }
   componentDidMount() {
     axios
-      .get(
-        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=V18JBVR8U7KTDD7W`
-      )
+      .get(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=V18JBVR8U7KTDD7W`)
       .then(res => this.setState({ globalQuote: res.data['Global Quote'] }));
   }
   handleTickerSearch = async e => {
@@ -75,7 +73,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className='dashboard'>
-        {/* <Navigation /> */}
+        <Navigation />
         <DashboardContainer
           tickerSearch={this.state.tickerSearch}
           companySearch={this.state.companySearch}

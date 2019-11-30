@@ -5,7 +5,7 @@ import './company-info.styles.scss';
 const CompanyInfo = ({ globalQuote, chartData }) => {
   return (
     <div className='company-info'>
-      <h3>{globalQuote['01. symbol']}</h3>
+      <h3>{globalQuote['01. symbol'] || null}</h3>
       <p>{parseFloat(globalQuote['05. price']).toFixed(2)}</p>
       <ul>
         <li>Open: {parseFloat(globalQuote['02. open']).toFixed(2)}</li>

@@ -16,9 +16,7 @@ class HomePage extends Component {
     };
   }
   async componentDidMount() {
-    let headlines = await axios.get(
-      'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=50e00636604e42f89129053042aeaafc'
-    );
+    let headlines = await axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=50e00636604e42f89129053042aeaafc');
     this.setState({ headlineStories: headlines.data.articles });
   }
   handleSignout = () => {
@@ -31,7 +29,7 @@ class HomePage extends Component {
   render() {
     return (
       <div className='homepage'>
-        {/* <Navigation user={this.props.user} handleSignout={this.handleSignout} /> */}
+        <Navigation user={this.props.user} handleSignout={this.handleSignout} />
         <HomepageContainer newsList={this.state.headlineStories} />
       </div>
     );
