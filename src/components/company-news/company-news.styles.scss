@@ -1,5 +1,5 @@
 .company-news {
-  width: 60%;
+  width: 100%;
 
   img {
     width: 100%;
@@ -34,13 +34,20 @@
   }
 
   ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+
+    @media (max-width: 968px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   li {
-    width: 30%;
     margin-bottom: 1rem;
     overflow: hidden;
   }

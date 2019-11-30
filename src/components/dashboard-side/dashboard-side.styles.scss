@@ -3,4 +3,9 @@
   width: 30%;
   border: 2px solid black;
   padding: 1rem;
+
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+    width: 96%;
+  }
 }

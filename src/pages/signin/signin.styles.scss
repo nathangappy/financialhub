@@ -1,0 +1,33 @@
+.signin {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../img/signup.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #fff;
+  }
+}
+
+.signin-wrapper {
+  width: 50%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+.signin-form {
+  background: orange;
+}
+
+.signin-info {
+  background: yellow;
+}

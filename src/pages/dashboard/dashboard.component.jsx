@@ -24,7 +24,8 @@ class Dashboard extends Component {
   componentDidMount() {
     axios
       .get(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=V18JBVR8U7KTDD7W`)
-      .then(res => this.setState({ globalQuote: res.data['Global Quote'] }));
+      .then(res => this.setState({ globalQuote: res.data['Global Quote'] }))
+      .catch(err => console.log('no stock return, API is DUMB'));
   }
   handleTickerSearch = async e => {
     e.preventDefault();

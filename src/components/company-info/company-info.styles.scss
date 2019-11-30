@@ -1,9 +1,28 @@
 .company-info {
-  width: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 
   ul {
     list-style: none;
     margin: 0;
     margin-bottom: 2rem;
   }
+}
+
+.quote-info {
+  width: 25%;
+}
+
+.positve {
+  color: green;
+}
+
+.negative {
+  color: red;
 }

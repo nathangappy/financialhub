@@ -6,7 +6,7 @@ const HomeNews = ({ newsList }) => {
   let headlineList = newsList.map(story => {
     return (
       <li key={story.url}>
-        <div>
+        <div className='story-image'>
           <img src={story.urlToImage} alt='' />
         </div>
         <div className='story-info'>

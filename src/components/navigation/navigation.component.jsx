@@ -5,15 +5,16 @@ import firebase from '../../firebase';
 // import styles
 import './navigation.styles.scss';
 
-import SignedInLinks from '../signed-in-links/SignedInLinks.component';
-import SignedOutLinks from '../signed-out-links/SignedOutLinks.component';
+import SignedInLinks from '../signed-in-links/signed-in-links.component';
+import SignedOutLinks from '../signed-out-links/signed-out-links.component';
 
 class Navigation extends Component {
   constructor() {
     super();
 
     this.state = {
-      isLoggedIn: false
+      isLoggedIn: false,
+      openSlideMenu: false
     };
   }
   componentDidMount() {
@@ -25,11 +26,21 @@ class Navigation extends Component {
       }
     });
   }
+  handleMobileClick = () => {
+    this.setState({ openSlideMenu: !this.state.openSlideMenu });
+  };
   render() {
+    let openMobile = this.state.openSlideMenu;
+    openMobile = openMobile === true ? 'open' : 'close';
     return (
       <header className='navigation'>
         <h1>FinanceHub</h1>
-        {this.state.isLoggedIn ? <SignedInLinks handleSignout={this.props.handleSignout} /> : <SignedOutLinks />}
+        {this.state.isLoggedIn ? (
+          <SignedInLinks handleSignout={this.props.handleSignout} mobileMenu={openMobile} handleMobileClick={this.handleMobileClick} />
+        ) : (
+          <SignedOutLinks mobileMenu={openMobile} handleMobileClick={this.handleMobileClick} />
+        )}
+        <i className='fas fa-bars' onClick={this.handleMobileClick}></i>
       </header>
     );
   }

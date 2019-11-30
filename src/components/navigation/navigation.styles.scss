@@ -1,16 +1,45 @@
 .navigation {
   display: flex;
+  align-items: center;
   padding: 1rem;
   justify-content: space-between;
   background: lightgray;
+  height: 8vh;
+
+  .fa-bars {
+    display: none;
+    font-size: 2rem;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
 
   ul {
     display: flex;
     list-style: none;
+
+    @media (max-width: 600px) {
+      position: fixed;
+      text-align: center;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background: #111;
+      overflow: hidden;
+      opacity: 0.9;
+      flex-direction: column;
+      z-index: 1;
+      transition: 0.5s;
+    }
   }
 
   li {
     margin: 1rem;
+
+    @media (max-width: 600px) {
+      margin: 1.5rem 0;
+    }
   }
 
   .navLink {
@@ -18,6 +47,11 @@
     text-decoration: none;
     &:hover {
       color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      color: #fff;
+      font-size: 1.6rem;
     }
   }
 }

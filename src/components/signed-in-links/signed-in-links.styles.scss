@@ -1,0 +1,21 @@
+.links-open {
+  @media (max-width: 600px) {
+    width: 50%;
+  }
+}
+
+.links-closed {
+  @media (max-width: 600px) {
+    width: 0%;
+  }
+}
+
+.fa-minus-circle {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+    font-size: 4rem;
+    color: red;
+  }
+}

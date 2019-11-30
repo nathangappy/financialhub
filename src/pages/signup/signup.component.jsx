@@ -20,12 +20,14 @@ class SignUp extends Component {
   };
   handleSignupSubmit = async e => {
     e.preventDefault();
-    const { email, password } = this.state;
-    await firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(() => this.setState({ email: '', password: '' }))
-      .catch(err => console.log(err));
+    try {
+      const { email, password } = this.state;
+      await firebase.auth().createUserWithEmailAndPassword(email, password);
+      this.setState({ email: '', password: '' });
+      this.props.history.push('/');
+    } catch (error) {
+      console.log(error);
+    }
   };
   render() {
     return (
@@ -34,19 +36,9 @@ class SignUp extends Component {
         <h1>Become a Member of Our Finance Community</h1>
         <form action='' onSubmit={this.handleSignupSubmit}>
           <label htmlFor='email' />
-          <input
-            type='email'
-            name='email'
-            value={this.state.email}
-            onChange={this.handleSignupChange}
-          />
+          <input type='email' name='email' value={this.state.email} onChange={this.handleSignupChange} />
           <label htmlFor='password' />
-          <input
-            type='password'
-            name='password'
-            value={this.state.password}
-            onChange={this.handleSignupChange}
-          />
+          <input type='password' name='password' value={this.state.password} onChange={this.handleSignupChange} />
           <button>Become a Member</button>
         </form>
       </div>
