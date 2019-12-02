@@ -11,7 +11,6 @@ const HomeNews = ({ newsList }) => {
         </div>
         <div className='story-info'>
           <h3>{story.title}</h3>
-          <p>{story.name}</p>
         </div>
       </li>
     );
