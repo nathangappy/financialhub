@@ -26,6 +26,13 @@ class Navigation extends Component {
       }
     });
   }
+  handleSignout = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => console.log('signed out'))
+      .catch(err => console.log(err));
+  };
   handleMobileClick = () => {
     this.setState({ openSlideMenu: !this.state.openSlideMenu });
   };
@@ -36,9 +43,16 @@ class Navigation extends Component {
       <header className='navigation'>
         <h1>FinanceHub</h1>
         {this.state.isLoggedIn ? (
-          <SignedInLinks handleSignout={this.props.handleSignout} mobileMenu={openMobile} handleMobileClick={this.handleMobileClick} />
+          <SignedInLinks
+            handleSignout={this.handleSignout}
+            mobileMenu={openMobile}
+            handleMobileClick={this.handleMobileClick}
+          />
         ) : (
-          <SignedOutLinks mobileMenu={openMobile} handleMobileClick={this.handleMobileClick} />
+          <SignedOutLinks
+            mobileMenu={openMobile}
+            handleMobileClick={this.handleMobileClick}
+          />
         )}
         <i className='fas fa-bars' onClick={this.handleMobileClick}></i>
       </header>

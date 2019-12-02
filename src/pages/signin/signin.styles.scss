@@ -1,5 +1,6 @@
 .signin {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../img/signup.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../img/signup.jpg');
   background-size: cover;
   background-position: center;
   height: 92vh;
@@ -9,14 +10,15 @@
 
   h1 {
     color: #fff;
+    font-size: 3rem;
   }
 }
 
 .signin-wrapper {
-  width: 50%;
+  width: 70%;
   height: 50%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -25,6 +27,33 @@
 }
 
 .signin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 2rem;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  button {
+    margin-top: 1rem;
+    width: 100%;
+    height: 60px;
+    background: #2186eb;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+
+    &:hover {
+      background-color: #175da4;
+    }
+  }
 }
 
 .signin-info {

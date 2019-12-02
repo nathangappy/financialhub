@@ -32,7 +32,7 @@ class StockChart extends Component {
     });
   }
   render() {
-    console.log(this.props.data);
+    console.log(this.props);
     return (
       <div className='stock-chart'>
         <canvas id='myChart' ref={this.chartRef} height='300'></canvas>

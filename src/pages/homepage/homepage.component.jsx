@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import firebase from '../../firebase';
-
 import axios from 'axios';
 
 import Navigation from '../../components/navigation/navigation.component';
@@ -16,20 +14,15 @@ class HomePage extends Component {
     };
   }
   async componentDidMount() {
-    let headlines = await axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=50e00636604e42f89129053042aeaafc');
+    let headlines = await axios.get(
+      'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=50e00636604e42f89129053042aeaafc'
+    );
     this.setState({ headlineStories: headlines.data.articles });
   }
-  handleSignout = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => console.log('signed out'))
-      .catch(err => console.log(err));
-  };
   render() {
     return (
       <div className='homepage'>
-        <Navigation user={this.props.user} handleSignout={this.handleSignout} />
+        <Navigation user={this.props.user} />
         <HomepageContainer newsList={this.state.headlineStories} />
       </div>
     );
