@@ -1,6 +1,6 @@
 .signin {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../../img/signup.jpg');
+    url('../../img/signin.jpg');
   background-size: cover;
   background-position: center;
   height: 92vh;
@@ -17,12 +17,13 @@
 .signin-wrapper {
   width: 70%;
   height: 50%;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  // grid-template-columns: 1fr;
 
   @media (max-width: 600px) {
     width: 100%;
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
   }
 }
 
@@ -56,5 +57,7 @@
   }
 }
 
-.signin-info {
+.signup-feedback {
+  text-align: center;
+  margin-top: 1rem;
 }

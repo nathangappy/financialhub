@@ -12,7 +12,8 @@ class SignUp extends Component {
 
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      successfulSignup: false
     };
   }
   handleSignupChange = e => {
@@ -23,6 +24,7 @@ class SignUp extends Component {
     try {
       const { email, password } = this.state;
       await firebase.auth().createUserWithEmailAndPassword(email, password);
+      this.setState({ successfulSignup: true });
       this.setState({ email: '', password: '' });
       this.props.history.push('/');
     } catch (error) {
@@ -33,14 +35,39 @@ class SignUp extends Component {
     return (
       <div>
         <Navigation />
-        <h1>Become a Member of Our Finance Community</h1>
-        <form action='' onSubmit={this.handleSignupSubmit}>
-          <label htmlFor='email' />
-          <input type='email' name='email' value={this.state.email} onChange={this.handleSignupChange} />
-          <label htmlFor='password' />
-          <input type='password' name='password' value={this.state.password} onChange={this.handleSignupChange} />
-          <button>Become a Member</button>
-        </form>
+        <div className='signup'>
+          <div className='signup-form'>
+            <h1>Join our community</h1>
+            <form
+              action=''
+              onSubmit={this.handleSignupSubmit}
+              autoComplete='off'
+            >
+              <label htmlFor='email' />
+              <input
+                type='email'
+                name='email'
+                placeholder='Email'
+                value={this.state.email}
+                onChange={this.handleSignupChange}
+              />
+              <label htmlFor='password' />
+              <input
+                type='password'
+                name='password'
+                placeholder='Password'
+                value={this.state.password}
+                onChange={this.handleSignupChange}
+              />
+              <button>Become a Member</button>
+            </form>
+          </div>
+          {this.state.successfulSignup ? (
+            <div className='signup-feedback'>
+              <i class='far fa-check-circle'></i>
+            </div>
+          ) : null}
+        </div>
       </div>
     );
   }

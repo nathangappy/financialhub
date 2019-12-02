@@ -12,7 +12,8 @@ class SignIn extends Component {
 
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      successfulLogin: false
     };
   }
   handleSignInChange = e => {
@@ -24,7 +25,8 @@ class SignIn extends Component {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      // .then(() => this.props.history.push('/'))
+      .then(this.setState({ successfulLogin: true }))
+      .then(() => this.props.history.push('/'))
       .then(this.setState({ email: '', password: '' }))
       .catch(err => console.log(err));
   };
@@ -39,7 +41,7 @@ class SignIn extends Component {
               <form
                 action=''
                 onSubmit={this.handleSignInSubmit}
-                autocomplete='off'
+                autoComplete='off'
               >
                 <label htmlFor='email' />
                 <input
@@ -78,6 +80,11 @@ class SignIn extends Component {
                 neque earum eos.
               </p>
             </div> */}
+            {this.state.successfulLogin ? (
+              <div className='signup-feedback'>
+                <i class='far fa-check-circle'></i>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

@@ -13,12 +13,11 @@ class Sectors extends Component {
     };
   }
   async componentDidMount() {
-    let sectorData;
     try {
-      sectorData = await axios.get(
+      let sectorData = await axios.get(
         'https://www.alphavantage.co/query?function=SECTOR&apikey=V18JBVR8U7KTDD7W'
       );
-      const sectorArray = Object.entries(
+      const sectorArray = await Object.entries(
         sectorData.data['Rank F: Year-to-Date (YTD) Performance'] || null
       );
       this.setState({ sectors: sectorArray });

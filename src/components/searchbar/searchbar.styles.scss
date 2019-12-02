@@ -6,6 +6,15 @@
 
     button {
       margin-left: 3px;
+      font-size: 1.3rem;
+      padding: 0.3rem 0.8rem;
+      background: #2186eb;
+      color: #fff;
+      border: none;
+
+      &:hover {
+        background: #175da4;
+      }
     }
   }
 
@@ -25,7 +34,9 @@ label {
 }
 
 input {
+  width: 60%;
   text-align: center;
+  font-size: 1.5rem;
   @media (max-width: 600px) {
     font-size: 1.5rem;
   }

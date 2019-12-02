@@ -28,15 +28,17 @@ class Dashboard extends Component {
         `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=V18JBVR8U7KTDD7W`
       )
       .then(res => this.setState({ globalQuote: res.data['Global Quote'] }))
-      .catch(err => console.log('no stock return, API is DUMB'));
-    // axios
-    //   .get(
-    //     `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=V18JBVR8U7KTDD7W`
-    //   )
-    //   .then(res => {
-    //     this.setState({ chartData: res.data['Time Series (Daily)'] });
-    //   })
-    //   .catch(err => console.log('error getting chart data'));
+      .catch(err => {
+        this.props.history.push('/dashboard');
+      });
+    axios
+      .get(
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=V18JBVR8U7KTDD7W`
+      )
+      .then(res => {
+        this.setState({ chartData: res.data['Time Series (Daily)'] });
+      })
+      .catch(err => console.log('error getting chart data'));
   }
   handleTickerSearch = async e => {
     e.preventDefault();
