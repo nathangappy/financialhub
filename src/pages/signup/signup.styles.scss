@@ -18,9 +18,15 @@
   align-items: center;
   border-radius: 5px;
 
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    width: 100%;
     color: #fff;
+    text-align: center;
   }
 
   form {
@@ -35,6 +41,10 @@
     font-size: 2rem;
     text-align: left;
     padding: 1rem;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
 
   button {
