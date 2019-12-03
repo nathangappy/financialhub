@@ -1,13 +1,16 @@
 .signup {
   height: 92vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../../img/signup.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../img/signup.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 600px) {
+    background-position: center;
+  }
 }
 
 .signup-form {
@@ -40,10 +43,11 @@
     border: none;
     font-size: 2rem;
     text-align: left;
-    padding: 1rem;
+    padding: 0.8rem;
 
     @media (max-width: 800px) {
       width: 100%;
+      font-size: 1.6rem;
     }
   }
 
@@ -55,6 +59,10 @@
     color: #fff;
     border: none;
     font-size: 2rem;
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
 
     &:hover {
       background-color: #175da4;
