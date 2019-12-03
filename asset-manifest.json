@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/financialhub/static/css/main.b1bbd743.chunk.css",
+    "main.js": "/financialhub/static/js/main.da6f5dc9.chunk.js",
+    "main.js.map": "/financialhub/static/js/main.da6f5dc9.chunk.js.map",
+    "runtime-main.js": "/financialhub/static/js/runtime-main.84660b4d.js",
+    "runtime-main.js.map": "/financialhub/static/js/runtime-main.84660b4d.js.map",
+    "static/js/2.2b774828.chunk.js": "/financialhub/static/js/2.2b774828.chunk.js",
+    "static/js/2.2b774828.chunk.js.map": "/financialhub/static/js/2.2b774828.chunk.js.map",
+    "index.html": "/financialhub/index.html",
+    "precache-manifest.6d9103c07cdea7c64f1e733f7742228f.js": "/financialhub/precache-manifest.6d9103c07cdea7c64f1e733f7742228f.js",
+    "service-worker.js": "/financialhub/service-worker.js",
+    "static/css/main.b1bbd743.chunk.css.map": "/financialhub/static/css/main.b1bbd743.chunk.css.map",
+    "static/media/homepage-hero.styles.scss": "/financialhub/static/media/finance-buildings.f7ffd22c.jpg",
+    "static/media/signin.styles.scss": "/financialhub/static/media/signin.daf2c8dc.jpg",
+    "static/media/signup.styles.scss": "/financialhub/static/media/signup.1401a6ab.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.84660b4d.js",
+    "static/js/2.2b774828.chunk.js",
+    "static/css/main.b1bbd743.chunk.css",
+    "static/js/main.da6f5dc9.chunk.js"
+  ]
+}
