@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/financialhub/static/css/main.b1bbd743.chunk.css",
-    "main.js": "/financialhub/static/js/main.e6703cb4.chunk.js",
-    "main.js.map": "/financialhub/static/js/main.e6703cb4.chunk.js.map",
+    "main.js": "/financialhub/static/js/main.da92a96c.chunk.js",
+    "main.js.map": "/financialhub/static/js/main.da92a96c.chunk.js.map",
     "runtime-main.js": "/financialhub/static/js/runtime-main.f7763b76.js",
     "runtime-main.js.map": "/financialhub/static/js/runtime-main.f7763b76.js.map",
     "static/js/2.96d2097d.chunk.js": "/financialhub/static/js/2.96d2097d.chunk.js",
     "static/js/2.96d2097d.chunk.js.map": "/financialhub/static/js/2.96d2097d.chunk.js.map",
     "index.html": "/financialhub/index.html",
-    "precache-manifest.096ac3fcddf0d26dd533681b6a200ddd.js": "/financialhub/precache-manifest.096ac3fcddf0d26dd533681b6a200ddd.js",
+    "precache-manifest.b50a08f9b0d854fc851fed1f5701e52f.js": "/financialhub/precache-manifest.b50a08f9b0d854fc851fed1f5701e52f.js",
     "service-worker.js": "/financialhub/service-worker.js",
     "static/css/main.b1bbd743.chunk.css.map": "/financialhub/static/css/main.b1bbd743.chunk.css.map",
     "static/media/homepage-hero.styles.scss": "/financialhub/static/media/finance-buildings.f7ffd22c.jpg",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.f7763b76.js",
     "static/js/2.96d2097d.chunk.js",
     "static/css/main.b1bbd743.chunk.css",
-    "static/js/main.e6703cb4.chunk.js"
+    "static/js/main.da92a96c.chunk.js"
   ]
 }
