@@ -1,5 +1,6 @@
 .signin {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../img/signin.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../img/signin.jpg');
   background-size: cover;
   background-position: center;
   height: 92vh;
@@ -50,6 +51,8 @@
 
     @media (max-width: 600px) {
       width: 90%;
+      font-size: 1.6rem;
+      padding: 0.5rem;
     }
   }
 
@@ -75,4 +78,8 @@
 .signup-feedback {
   text-align: center;
   margin-top: 1rem;
+
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+  }
 }
