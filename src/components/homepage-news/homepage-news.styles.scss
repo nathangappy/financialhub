@@ -12,8 +12,25 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
 
+    a {
+      text-decoration: none;
+      color: #000;
+
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
     li {
       display: flex;
+
+      &:focus {
+        display: none;
+      }
+    }
+
+    h3:hover {
+      color: #777;
     }
 
     @media (max-width: 1200px) {
@@ -23,11 +40,17 @@
 
   img {
     width: 100%;
+
+    &:hover {
+      transition: 0.6s;
+      transform: scale(1.1);
+    }
   }
 }
 
 .story-image {
   width: 50%;
+  overflow: hidden;
 }
 
 .story-info {

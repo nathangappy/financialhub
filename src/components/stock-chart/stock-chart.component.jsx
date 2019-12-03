@@ -34,7 +34,15 @@ class StockChart extends Component {
   render() {
     return (
       <div className='stock-chart'>
-        <canvas id='myChart' ref={this.chartRef} height='300'></canvas>
+        <canvas
+          id='myChart'
+          ref={this.chartRef}
+          height='300'
+          aria-label='Hello ARIA World'
+          role='img'
+        >
+          <p>Hello Aria. The Chart seems to be malfunctioning</p>
+        </canvas>
       </div>
     );
   }
