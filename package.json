@@ -17,8 +17,8 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "predeploy": "sudo npm run build",
-    "deploy": "sudo gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
