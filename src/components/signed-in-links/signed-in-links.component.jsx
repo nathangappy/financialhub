@@ -12,16 +12,6 @@ const SignedInLinks = ({ mobileMenu, handleMobileClick, handleSignout }) => (
       </Link>
     </li>
     <li onClick={handleMobileClick}>
-      <Link to='/dashboard' className='navLink'>
-        Dashboard
-      </Link>
-    </li>
-    <li onClick={handleMobileClick}>
-      <Link to='/community' className='navLink'>
-        Community
-      </Link>
-    </li>
-    <li onClick={handleMobileClick}>
       <Link to='/portfolio' className='navLink'>
         Portfolio
       </Link>

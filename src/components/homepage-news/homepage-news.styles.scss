@@ -1,6 +1,6 @@
 .homenews {
   margin: 2rem 0;
-  width: 65%;
+  width: 100%;
 
   @media (max-width: 600px) {
     margin: 0rem 0;
@@ -9,7 +9,7 @@
 
   ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
 
     a {
