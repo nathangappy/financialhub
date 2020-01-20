@@ -25,7 +25,7 @@ class Dashboard extends Component {
     this.setState({ globalQuote: {}, chartData: {} });
     axios
       .get(
-        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=V18JBVR8U7KTDD7W`
+        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=VN8ZHM1KG3SFX28V`
       )
       .then(res => this.setState({ globalQuote: res.data['Global Quote'] }))
       .catch(err => {
@@ -33,7 +33,7 @@ class Dashboard extends Component {
       });
     axios
       .get(
-        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=V18JBVR8U7KTDD7W`
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=VN8ZHM1KG3SFX28V`
       )
       .then(res => {
         this.setState({ chartData: res.data['Time Series (Daily)'] });
@@ -54,13 +54,13 @@ class Dashboard extends Component {
 
       // get quote data about searched ticker
       let quote = await axios.get(
-        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.tickerSearch.toUpperCase()}&apikey=V18JBVR8U7KTDD7W`
+        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${this.state.tickerSearch.toUpperCase()}&apikey=VN8ZHM1KG3SFX28V`
       );
       this.setState({ globalQuote: quote.data['Global Quote'] });
 
       // get up to date chart data for searched ticker
       let chartData = await axios.get(
-        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${this.state.tickerSearch.toUpperCase()}&apikey=V18JBVR8U7KTDD7W`
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${this.state.tickerSearch.toUpperCase()}&apikey=VN8ZHM1KG3SFX28V`
       );
       this.setState({ chartData: chartData.data['Time Series (Daily)'] });
       this.setState({ tickerSearch: '' });
@@ -76,7 +76,7 @@ class Dashboard extends Component {
     try {
       let matches = [];
       let data = await axios.get(
-        `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${this.state.companySearch}&apikey=V18JBVR8U7KTDD7W`
+        `https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${this.state.companySearch}&apikey=VN8ZHM1KG3SFX28V`
       );
       data.data.bestMatches.forEach(match => matches.push(match));
       this.setState({ companyMatches: matches });
