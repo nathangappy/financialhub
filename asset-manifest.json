@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/financialhub/static/css/main.340cadb9.chunk.css",
-    "main.js": "/financialhub/static/js/main.4c534e52.chunk.js",
-    "main.js.map": "/financialhub/static/js/main.4c534e52.chunk.js.map",
-    "runtime-main.js": "/financialhub/static/js/runtime-main.f7763b76.js",
-    "runtime-main.js.map": "/financialhub/static/js/runtime-main.f7763b76.js.map",
-    "static/js/2.1a7017d5.chunk.js": "/financialhub/static/js/2.1a7017d5.chunk.js",
-    "static/js/2.1a7017d5.chunk.js.map": "/financialhub/static/js/2.1a7017d5.chunk.js.map",
+    "main.js": "/financialhub/static/js/main.7e8c0a5b.chunk.js",
+    "main.js.map": "/financialhub/static/js/main.7e8c0a5b.chunk.js.map",
+    "runtime-main.js": "/financialhub/static/js/runtime-main.29713617.js",
+    "runtime-main.js.map": "/financialhub/static/js/runtime-main.29713617.js.map",
+    "static/js/2.d147ff0d.chunk.js": "/financialhub/static/js/2.d147ff0d.chunk.js",
+    "static/js/2.d147ff0d.chunk.js.map": "/financialhub/static/js/2.d147ff0d.chunk.js.map",
     "index.html": "/financialhub/index.html",
-    "precache-manifest.3a92bfdc72f88e7c7a5334a8f9250c45.js": "/financialhub/precache-manifest.3a92bfdc72f88e7c7a5334a8f9250c45.js",
+    "precache-manifest.cc310d430f59b527b6ff28d267d28dd7.js": "/financialhub/precache-manifest.cc310d430f59b527b6ff28d267d28dd7.js",
     "service-worker.js": "/financialhub/service-worker.js",
     "static/css/main.340cadb9.chunk.css.map": "/financialhub/static/css/main.340cadb9.chunk.css.map",
     "static/media/homepage-hero.styles.scss": "/financialhub/static/media/finance-buildings.f7ffd22c.jpg",
@@ -16,9 +16,9 @@
     "static/media/signup.styles.scss": "/financialhub/static/media/signup.1401a6ab.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f7763b76.js",
-    "static/js/2.1a7017d5.chunk.js",
+    "static/js/runtime-main.29713617.js",
+    "static/js/2.d147ff0d.chunk.js",
     "static/css/main.340cadb9.chunk.css",
-    "static/js/main.4c534e52.chunk.js"
+    "static/js/main.7e8c0a5b.chunk.js"
   ]
 }

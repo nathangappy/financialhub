@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dbbd0d83a96b99c7c4fecb53e47f54c",
+    "revision": "9ffde5abb3e31379068abb0e769614b8",
     "url": "/financialhub/index.html"
   },
   {
-    "revision": "b24cdfc9e8c373468cc7",
+    "revision": "680a7a803f2d808d3287",
     "url": "/financialhub/static/css/main.340cadb9.chunk.css"
   },
   {
-    "revision": "d1ecbc531990dce1a0ee",
-    "url": "/financialhub/static/js/2.1a7017d5.chunk.js"
+    "revision": "47fc05995db262595abf",
+    "url": "/financialhub/static/js/2.d147ff0d.chunk.js"
   },
   {
-    "revision": "b24cdfc9e8c373468cc7",
-    "url": "/financialhub/static/js/main.4c534e52.chunk.js"
+    "revision": "680a7a803f2d808d3287",
+    "url": "/financialhub/static/js/main.7e8c0a5b.chunk.js"
   },
   {
-    "revision": "21d688bebbc49c2780a0",
-    "url": "/financialhub/static/js/runtime-main.f7763b76.js"
+    "revision": "5e22a7754f47613708d7",
+    "url": "/financialhub/static/js/runtime-main.29713617.js"
   },
   {
     "revision": "f7ffd22cbaeb1e6a1fcaf89b82ee62b7",
