@@ -15,13 +15,12 @@ const SearchBar = props => {
   return (
     <div className='searchbar'>
       <form action='' onSubmit={props.handleTickerSearch} className='tickerSearch'>
-        <label htmlFor='tickerSearch'>Get Financial Data</label>
+        <label htmlFor='tickerSearch'>Search By Company Symbol</label>
         <input
           type='text'
           onChange={props.handleSearchChange}
           value={props.tickerSearch}
           name='tickerSearch'
-          placeholder='Enter Company Ticker'
         />
         <button>Get Info</button>
       </form>
@@ -32,7 +31,6 @@ const SearchBar = props => {
           onChange={props.handleSearchChange}
           value={props.companySearch}
           name='companySearch'
-          placeholder='Enter Company Name'
         />
         <button>Find Symbol</button>
       </form>
