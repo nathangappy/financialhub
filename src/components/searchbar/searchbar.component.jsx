@@ -25,7 +25,7 @@ const SearchBar = props => {
         <button>Get Info</button>
       </form>
       <form action='' onSubmit={props.handleCompanyLookup} className='companySearch'>
-        <label htmlFor='companySearch'>Enter Company For Company Stock Symbol</label>
+        <label htmlFor='companySearch'>Enter Name Company For Stock Symbol Search</label>
         <input
           type='text'
           onChange={props.handleSearchChange}
