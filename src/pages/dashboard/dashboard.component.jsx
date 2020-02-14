@@ -21,8 +21,18 @@ class Dashboard extends Component {
       companyMatches: []
     };
   }
+  // get data for microsoft on page load using promises to display abililty to use promises
   componentDidMount() {
     this.setState({ globalQuote: {}, chartData: {} });
+    let newsArray = [];
+    axios
+      .get(
+        `https://stocknewsapi.com/api/v1?tickers=MSFT&items=12&token=j5kxgoilv3tyac5is1rcowzhm1bgacherychyco2`
+      )
+      .then(news => {
+        news.data.data.forEach(item => newsArray.push(item));
+        this.setState({ stockNews: newsArray });
+      });
     axios
       .get(
         `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=MSFT&apikey=VN8ZHM1KG3SFX28V`
@@ -40,6 +50,7 @@ class Dashboard extends Component {
       })
       .catch(err => console.log('error getting chart data'));
   }
+  // get data for companies on search submit using async/await displaying ability to use async/await
   handleTickerSearch = async e => {
     e.preventDefault();
     this.setState({ chartData: {} });
@@ -47,7 +58,7 @@ class Dashboard extends Component {
       // get news stories about searched ticker
       let newsArray = [];
       let news = await axios.get(
-        `https://stocknewsapi.com/api/v1?tickers=${this.state.tickerSearch.toUpperCase()}&items=9&token=j5kxgoilv3tyac5is1rcowzhm1bgacherychyco2`
+        `https://stocknewsapi.com/api/v1?tickers=${this.state.tickerSearch.toUpperCase()}&items=12&token=j5kxgoilv3tyac5is1rcowzhm1bgacherychyco2`
       );
       news.data.data.forEach(item => newsArray.push(item));
       this.setState({ stockNews: newsArray });

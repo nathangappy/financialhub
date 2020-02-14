@@ -15,7 +15,7 @@ const SearchBar = props => {
   return (
     <div className='searchbar'>
       <form action='' onSubmit={props.handleTickerSearch} className='tickerSearch'>
-        <label htmlFor='tickerSearch'>Search By Company Symbol</label>
+        <label htmlFor='tickerSearch'>Enter Company Stock Symbol For Data</label>
         <input
           type='text'
           onChange={props.handleSearchChange}
@@ -25,7 +25,7 @@ const SearchBar = props => {
         <button>Get Info</button>
       </form>
       <form action='' onSubmit={props.handleCompanyLookup} className='companySearch'>
-        <label htmlFor='companySearch'>Search for Company Symbol</label>
+        <label htmlFor='companySearch'>Enter Company For Company Stock Symbol</label>
         <input
           type='text'
           onChange={props.handleSearchChange}

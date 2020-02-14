@@ -5,13 +5,8 @@ import './homepage-news.styles.scss';
 const HomeNews = ({ newsList }) => {
   let headlineList = newsList.map((story, idx) => {
     return (
-      <a
-        href={story.url}
-        target='_blank'
-        rel='noopener noreferrer'
-        tabIndex={idx}
-      >
-        <li key={story.url}>
+      <a href={story.url} target='_blank' rel='noopener noreferrer' tabIndex={idx} key={story.url}>
+        <li>
           <div className='story-image'>
             <img src={story.urlToImage} alt='' />
           </div>
